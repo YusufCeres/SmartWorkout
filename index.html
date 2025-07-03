@@ -127,8 +127,27 @@
                                 <input type="number" class="stat-input" value="${exercise.Speed || 0}" data-exercise="${index}" data-field="Speed">
                             </div>
                             <div class="stat-group">
-                                <label class="stat-label">Incline </label>
+                                <label class="stat-label">Incline (%)</label>
                                 <input type="number" class="stat-input" value="${exercise.Incline || 0}" data-exercise="${index}" data-field="Incline">
+                            </div>
+                        </div>
+                        <div class="exercise-notes">${exercise.notes}</div>
+                    `;
+                } else if (exercise.name === 'D Row Handle') {
+                    card.innerHTML = `
+                        <div class="exercise-name">${exercise.name}</div>
+                        <div class="exercise-stats">
+                            <div class="stat-group">
+                                <label class="stat-label">Sets</label>
+                                <input type="number" class="stat-input" value="${exercise.sets || 0}" data-exercise="${index}" data-field="sets">
+                            </div>
+                            <div class="stat-group">
+                                <label class="stat-label">Reps</label>
+                                <input type="number" class="stat-input" value="${exercise.reps || 0}" data-exercise="${index}" data-field="reps">
+                            </div>
+                            <div class="stat-group">
+                                <label class="stat-label">Weight</label>
+                                <input type="number" class="stat-input" value="${exercise.weight || exercise.weights || 0}" data-exercise="${index}" data-field="weight">
                             </div>
                         </div>
                         <div class="exercise-notes">${exercise.notes}</div>
