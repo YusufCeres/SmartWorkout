@@ -1,0 +1,278 @@
+{
+  "aneeqah": {
+    "day1": {
+      "name": "Push (Chest, Triceps, Side Delts)",
+      "targetMuscles": ["chest", "triceps", "side_delts"],
+      "exercises": [
+        {
+          "name": "Bench Press",
+          "sets": 4,
+          "reps": 6,
+          "weight": 25,
+          "notes": "Focus on controlled movement"
+        },
+        {
+          "name": "Tricep Cable Extensions",
+          "sets": 3,
+          "reps": 12,
+          "weight": 15,
+          "notes": "Keep elbows stationary"
+        },
+        {
+          "name": "Lateral Raises",
+          "sets": 3,
+          "reps": 8,
+          "weight": 2.5,
+          "notes": "Control the eccentric"
+        }
+      ]
+    },
+    "day2": {
+      "name": "Pull (Back, Biceps)",
+      "targetMuscles": ["back", "biceps"],
+      "exercises": [
+        {
+          "name": "EZ Bar Preacher Curl",
+          "sets": 4,
+          "reps": 8,
+          "weight": 15,
+          "notes": "Full range of motion"
+        },
+        {
+          "name": "Incline Dumbbell Curl",
+          "sets": 4,
+          "reps": 8,
+          "weight": 6,
+          "notes": "Keep shoulders back"
+        },
+        {
+          "name": "Cable Rows",
+          "sets": 4,
+          "reps": 10,
+          "weight": 40,
+          "notes": "Squeeze shoulder blades"
+        },
+        {
+          "name": "Lat Pulldown",
+          "sets": 4,
+          "reps": 10,
+          "weight": 45,
+          "notes": "Pull to upper chest"
+        }
+      ]
+    },
+    "day3": {
+      "name": "Legs + Calves",
+      "targetMuscles": ["quadriceps", "hamstrings", "glutes", "calves"],
+      "exercises": [
+        {
+          "name": "Lunges",
+          "sets": 4,
+          "reps": 12,
+          "weight": 12,
+          "notes": "Alternate legs or do single leg sets"
+        },
+        {
+          "name": "Hamstring Curl",
+          "sets": 3,
+          "reps": 12,
+          "weight": 25,
+          "notes": "Control the negative"
+        },
+        {
+          "name": "Standing Calf Raises",
+          "sets": 4,
+          "reps": 15,
+          "weight": 20,
+          "notes": "Pause at the top"
+        },
+        {
+          "name": "Seated Calf Raises",
+          "sets": 3,
+          "reps": 20,
+          "weight": 15,
+          "notes": "Full stretch at bottom"
+        },
+        {
+          "name": "Hip Thrusts",
+          "sets": 3,
+          "reps": 15,
+          "weight": 30,
+          "notes": "Optional - focus on glute activation"
+        }
+      ]
+    },
+    "day4": {
+      "name": "Push + Rear Delts",
+      "targetMuscles": ["chest", "shoulders", "triceps", "rear_delts"],
+      "exercises": [
+        {
+          "name": "Incline Bench Press",
+          "sets": 4,
+          "reps": 8,
+          "weight": 30,
+          "notes": "45-degree incline"
+        },
+        {
+          "name": "Shoulder Press",
+          "sets": 4,
+          "reps": 10,
+          "weight": 15,
+          "notes": "Keep core tight"
+        },
+        {
+          "name": "Face Pull",
+          "sets": 3,
+          "reps": 15,
+          "weight": 12,
+          "notes": "Focus on rear delt squeeze"
+        },
+        {
+          "name": "Cable Crossover",
+          "sets": 3,
+          "reps": 12,
+          "weight": 10,
+          "notes": "Squeeze at the center"
+        }
+      ]
+    }
+  },
+  "yusuf": {
+    "day1": {
+      "name": "Push (Chest, Triceps, Side Delts)",
+      "targetMuscles": ["chest", "triceps", "side_delts"],
+      "exercises": [
+        {
+          "name": "Bench Press",
+          "sets": 4,
+          "reps": 8,
+          "weight": 60,
+          "notes": "Focus on controlled movement"
+        },
+        {
+          "name": "Tricep Cable Extensions",
+          "sets": 3,
+          "reps": 12,
+          "weight": 25,
+          "notes": "Keep elbows stationary"
+        },
+        {
+          "name": "Lateral Raises",
+          "sets": 3,
+          "reps": 15,
+          "weight": 12,
+          "notes": "Control the eccentric"
+        }
+      ]
+    },
+    "day2": {
+      "name": "Pull (Back, Biceps)",
+      "targetMuscles": ["back", "biceps"],
+      "exercises": [
+        {
+          "name": "EZ Bar Preacher Curl",
+          "sets": 3,
+          "reps": 10,
+          "weight": 35,
+          "notes": "Full range of motion"
+        },
+        {
+          "name": "Incline Dumbbell Curl",
+          "sets": 3,
+          "reps": 12,
+          "weight": 18,
+          "notes": "Keep shoulders back"
+        },
+        {
+          "name": "Cable Rows",
+          "sets": 4,
+          "reps": 10,
+          "weight": 70,
+          "notes": "Squeeze shoulder blades"
+        },
+        {
+          "name": "Lat Pulldown",
+          "sets": 4,
+          "reps": 10,
+          "weight": 80,
+          "notes": "Pull to upper chest"
+        }
+      ]
+    },
+    "day3": {
+      "name": "Legs + Calves",
+      "targetMuscles": ["quadriceps", "hamstrings", "glutes", "calves"],
+      "exercises": [
+        {
+          "name": "Lunges",
+          "sets": 4,
+          "reps": 12,
+          "weight": 20,
+          "notes": "Alternate legs or do single leg sets"
+        },
+        {
+          "name": "Hamstring Curl",
+          "sets": 3,
+          "reps": 12,
+          "weight": 45,
+          "notes": "Control the negative"
+        },
+        {
+          "name": "Standing Calf Raises",
+          "sets": 4,
+          "reps": 15,
+          "weight": 40,
+          "notes": "Pause at the top"
+        },
+        {
+          "name": "Seated Calf Raises",
+          "sets": 3,
+          "reps": 20,
+          "weight": 30,
+          "notes": "Full stretch at bottom"
+        },
+        {
+          "name": "Hip Thrusts",
+          "sets": 3,
+          "reps": 15,
+          "weight": 60,
+          "notes": "Optional - focus on glute activation"
+        }
+      ]
+    },
+    "day4": {
+      "name": "Push + Rear Delts",
+      "targetMuscles": ["chest", "shoulders", "triceps", "rear_delts"],
+      "exercises": [
+        {
+          "name": "Incline Bench Press",
+          "sets": 4,
+          "reps": 8,
+          "weight": 55,
+          "notes": "45-degree incline"
+        },
+        {
+          "name": "Shoulder Press",
+          "sets": 4,
+          "reps": 10,
+          "weight": 25,
+          "notes": "Keep core tight"
+        },
+        {
+          "name": "Face Pull",
+          "sets": 3,
+          "reps": 15,
+          "weight": 18,
+          "notes": "Focus on rear delt squeeze"
+        },
+        {
+          "name": "Cable Crossover",
+          "sets": 3,
+          "reps": 12,
+          "weight": 15,
+          "notes": "Squeeze at the center"
+        }
+      ]
+    }
+  }
+}
