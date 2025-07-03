@@ -109,31 +109,50 @@
             const workout = workoutData[currentUser][currentDay];
             document.getElementById('workoutTitle').textContent = workout.name;
             document.getElementById('targetMuscles').textContent = `Target: ${workout.targetMuscles.join(', ')}`;
-            
             const exercisesList = document.getElementById('exercisesList');
             exercisesList.innerHTML = '';
-            
             workout.exercises.forEach((exercise, index) => {
                 const card = document.createElement('div');
                 card.className = 'exercise-card';
-                card.innerHTML = `
-                    <div class="exercise-name">${exercise.name}</div>
-                    <div class="exercise-stats">
-                        <div class="stat-group">
-                            <label class="stat-label">Sets</label>
-                            <input type="number" class="stat-input" value="${exercise.sets}" data-exercise="${index}" data-field="sets">
+                if (exercise.name === 'Incline Run') {
+                    card.innerHTML = `
+                        <div class="exercise-name">${exercise.name}</div>
+                        <div class="exercise-stats">
+                            <div class="stat-group">
+                                <label class="stat-label">Time (min)</label>
+                                <input type="number" class="stat-input" value="${exercise.Time || 0}" data-exercise="${index}" data-field="Time">
+                            </div>
+                            <div class="stat-group">
+                                <label class="stat-label">Speed (mph)</label>
+                                <input type="number" class="stat-input" value="${exercise.Speed || 0}" data-exercise="${index}" data-field="Speed">
+                            </div>
+                            <div class="stat-group">
+                                <label class="stat-label">Incline </label>
+                                <input type="number" class="stat-input" value="${exercise.Incline || 0}" data-exercise="${index}" data-field="Incline">
+                            </div>
                         </div>
-                        <div class="stat-group">
-                            <label class="stat-label">Reps</label>
-                            <input type="number" class="stat-input" value="${exercise.reps}" data-exercise="${index}" data-field="reps">
+                        <div class="exercise-notes">${exercise.notes}</div>
+                    `;
+                } else {
+                    card.innerHTML = `
+                        <div class="exercise-name">${exercise.name}</div>
+                        <div class="exercise-stats">
+                            <div class="stat-group">
+                                <label class="stat-label">Sets</label>
+                                <input type="number" class="stat-input" value="${exercise.sets}" data-exercise="${index}" data-field="sets">
+                            </div>
+                            <div class="stat-group">
+                                <label class="stat-label">Reps</label>
+                                <input type="number" class="stat-input" value="${exercise.reps}" data-exercise="${index}" data-field="reps">
+                            </div>
+                            <div class="stat-group">
+                                <label class="stat-label">Weight</label>
+                                <input type="number" class="stat-input" value="${exercise.weight}" data-exercise="${index}" data-field="weight">
+                            </div>
                         </div>
-                        <div class="stat-group">
-                            <label class="stat-label">Weight</label>
-                            <input type="number" class="stat-input" value="${exercise.weight}" data-exercise="${index}" data-field="weight">
-                        </div>
-                    </div>
-                    <div class="exercise-notes">${exercise.notes}</div>
-                `;
+                        <div class="exercise-notes">${exercise.notes}</div>
+                    `;
+                }
                 exercisesList.appendChild(card);
             });
         }
@@ -144,7 +163,12 @@
                 const exerciseIndex = parseInt(input.dataset.exercise);
                 const field = input.dataset.field;
                 const value = parseInt(input.value) || 0;
-                workoutData[currentUser][currentDay].exercises[exerciseIndex][field] = value;
+                // Special handling for Incline Run
+                if (workoutData[currentUser][currentDay].exercises[exerciseIndex].name === 'Incline Run') {
+                    workoutData[currentUser][currentDay].exercises[exerciseIndex][field] = value;
+                } else {
+                    workoutData[currentUser][currentDay].exercises[exerciseIndex][field] = value;
+                }
             });
             try {
                 // Save to the server using POST to /save-workout

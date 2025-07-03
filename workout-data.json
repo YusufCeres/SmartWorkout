@@ -24,6 +24,12 @@
           "reps": 8,
           "weight": 2.5,
           "notes": "Control the eccentric"
+        },{
+          "name": "Incline Run",
+          "Time": 10,
+          "Speed": 3,
+          "Incline": 6,
+          "notes": ""
         }
       ]
     },
@@ -58,6 +64,12 @@
           "reps": 10,
           "weight": 45,
           "notes": "Pull to upper chest"
+        },{
+          "name": "Incline Run",
+          "Time": 10,
+          "Speed": 3,
+          "Incline": 6,
+          "notes": ""
         }
       ]
     },
@@ -99,6 +111,12 @@
           "reps": 15,
           "weight": 30,
           "notes": "Optional - focus on glute activation"
+        },{
+          "name": "Incline Run",
+          "Time": 10,
+          "Speed": 3,
+          "Incline": 6,
+          "notes": ""
         }
       ]
     },
@@ -133,6 +151,12 @@
           "reps": 12,
           "weight": 10,
           "notes": "Squeeze at the center"
+        },{
+          "name": "Incline Run",
+          "Time": 10,
+          "Speed": 3,
+          "Incline": 6,
+          "notes": ""
         }
       ]
     }
@@ -162,6 +186,12 @@
           "reps": 15,
           "weight": 12,
           "notes": "Control the eccentric"
+        },{
+          "name": "Incline Run",
+          "Time": 10,
+          "Speed": 3,
+          "Incline": 6,
+          "notes": ""
         }
       ]
     },
@@ -196,6 +226,12 @@
           "reps": 10,
           "weight": 80,
           "notes": "Pull to upper chest"
+        },{
+          "name": "Incline Run",
+          "Time": 10,
+          "Speed": 3,
+          "Incline": 6,
+          "notes": ""
         }
       ]
     },
@@ -237,6 +273,12 @@
           "reps": 15,
           "weight": 60,
           "notes": "Optional - focus on glute activation"
+        },{
+          "name": "Incline Run",
+          "Time": 10,
+          "Speed": 3,
+          "Incline": 6,
+          "notes": ""
         }
       ]
     },
@@ -271,6 +313,12 @@
           "reps": 12,
           "weight": 15,
           "notes": "Squeeze at the center"
+        },{
+          "name": "Incline Run",
+          "Time": 10,
+          "Speed": 3,
+          "Incline": 6,
+          "notes": ""
         }
       ]
     }
