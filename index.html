@@ -4,42 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workout Tracker</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
-        .container { max-width: 800px; margin: 0 auto; background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .header { display: flex; flex-direction: column; gap: 16px; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; }
-        @media (min-width: 600px) {
-            .header { flex-direction: row; align-items: center; }
-        }
-        .user-switch { display: flex; gap: 10px; flex-wrap: wrap; }
-        .user-btn { padding: 8px 16px; border: 2px solid #ddd; background: white; border-radius: 4px; cursor: pointer; font-size: 1em; }
-        .user-btn.active { background: #007bff; color: white; border-color: #007bff; }
-        .day-selector { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
-        .day-btn { padding: 10px 20px; border: 1px solid #ddd; background: white; border-radius: 4px; cursor: pointer; font-size: 1em; }
-        .day-btn.active { background: #28a745; color: white; border-color: #28a745; }
-        .workout-info { background: #f8f9fa; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
-        .workout-title { font-size: 1.2em; font-weight: bold; margin-bottom: 5px; }
-        .target-muscles { color: #666; font-size: 0.9em; }
-        .exercise-card { border: 1px solid #ddd; border-radius: 4px; padding: 15px; margin-bottom: 10px; }
-        .exercise-name { font-weight: bold; margin-bottom: 10px; font-size: 1.1em; }
-        .exercise-stats { display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 10px; }
-        @media (min-width: 500px) {
-            .exercise-stats { grid-template-columns: 1fr 1fr 1fr; }
-        }
-        .stat-group { display: flex; flex-direction: column; }
-        .stat-label { font-size: 0.8em; color: #666; margin-bottom: 2px; }
-        .stat-input { padding: 8px; border: 1px solid #ddd; border-radius: 3px; text-align: center; font-size: 1em; }
-        .exercise-notes { font-size: 0.9em; color: #666; margin-top: 5px; }
-        .save-btn { background: #007bff; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; margin-top: 20px; font-size: 1.1em; width: 100%; max-width: 300px; display: block; margin-left: auto; margin-right: auto; }
-        .save-btn:hover { background: #0056b3; }
-        .success-msg { background: #d4edda; color: #155724; padding: 10px; border-radius: 4px; margin-top: 10px; display: none; text-align: center; }
-        @media (max-width: 500px) {
-            .container { padding: 8px; }
-            .save-btn { padding: 10px; font-size: 1em; }
-            .exercise-card { padding: 10px; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -50,25 +15,41 @@
                 <button class="user-btn" onclick="switchUser('yusuf')">Yusuf</button>
             </div>
         </div>
-        
         <div class="day-selector">
             <button class="day-btn active" onclick="selectDay('day1')">Day 1</button>
             <button class="day-btn" onclick="selectDay('day2')">Day 2</button>
             <button class="day-btn" onclick="selectDay('day3')">Day 3</button>
             <button class="day-btn" onclick="selectDay('day4')">Day 4</button>
         </div>
-        
         <div class="workout-info">
             <div class="workout-title" id="workoutTitle">Push (Chest, Triceps, Side Delts)</div>
             <div class="target-muscles" id="targetMuscles">Target: Chest, Triceps, Side Delts</div>
         </div>
-        
         <div id="exercisesList"></div>
-        
+        <div id="addExerciseForm" style="margin: 24px 0; padding: 16px; border-radius: 6px;">
+            <h3 style="margin-bottom: 10px;">Add Exercise</h3>
+            <form id="exerciseForm" onsubmit="return false;" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end;">
+                <div style="flex: 1 1 120px;">
+                    <label>Name<br><input type="text" id="exName" required style="width: 100%; padding: 6px;"></label>
+                </div>
+                <div style="flex: 1 1 60px;">
+                    <label>Sets<br><input type="number" id="exSets" min="1" style="width: 100%; padding: 6px;"></label>
+                </div>
+                <div style="flex: 1 1 60px;">
+                    <label>Reps<br><input type="number" id="exReps" min="1" style="width: 100%; padding: 6px;"></label>
+                </div>
+                <div style="flex: 1 1 80px;">
+                    <label>Weight<br><input type="number" id="exWeight" min="0" style="width: 100%; padding: 6px;"></label>
+                </div>
+                <div style="flex: 2 1 160px;">
+                    <label>Notes<br><input type="text" id="exNotes" style="width: 100%; padding: 6px;"></label>
+                </div>
+                <button type="submit" class="save-btn" style="flex: 1 1 100px; min-width: 120px;">Add</button>
+            </form>
+        </div>
         <button class="save-btn" onclick="saveWorkout()">Save Changes</button>
         <div class="success-msg" id="successMsg">Changes saved successfully!</div>
     </div>
-
     <script>
         let currentUser = 'aneeqah';
         let currentDay = 'day1';
@@ -127,27 +108,8 @@
                                 <input type="number" class="stat-input" value="${exercise.Speed || 0}" data-exercise="${index}" data-field="Speed">
                             </div>
                             <div class="stat-group">
-                                <label class="stat-label">Incline (%)</label>
+                                <label class="stat-label">Incline </label>
                                 <input type="number" class="stat-input" value="${exercise.Incline || 0}" data-exercise="${index}" data-field="Incline">
-                            </div>
-                        </div>
-                        <div class="exercise-notes">${exercise.notes}</div>
-                    `;
-                } else if (exercise.name === 'D Row Handle') {
-                    card.innerHTML = `
-                        <div class="exercise-name">${exercise.name}</div>
-                        <div class="exercise-stats">
-                            <div class="stat-group">
-                                <label class="stat-label">Sets</label>
-                                <input type="number" class="stat-input" value="${exercise.sets || 0}" data-exercise="${index}" data-field="sets">
-                            </div>
-                            <div class="stat-group">
-                                <label class="stat-label">Reps</label>
-                                <input type="number" class="stat-input" value="${exercise.reps || 0}" data-exercise="${index}" data-field="reps">
-                            </div>
-                            <div class="stat-group">
-                                <label class="stat-label">Weight</label>
-                                <input type="number" class="stat-input" value="${exercise.weight || exercise.weights || 0}" data-exercise="${index}" data-field="weight">
                             </div>
                         </div>
                         <div class="exercise-notes">${exercise.notes}</div>
@@ -207,6 +169,22 @@
                 console.error('Error saving workout data:', error);
             }
         }
+        
+        async function addExerciseUI() {
+            const name = document.getElementById('exName').value.trim();
+            const sets = parseInt(document.getElementById('exSets').value) || 0;
+            const reps = parseInt(document.getElementById('exReps').value) || 0;
+            const weight = parseInt(document.getElementById('exWeight').value) || 0;
+            const notes = document.getElementById('exNotes').value.trim();
+            if (!name) return;
+            // Add to local data
+            workoutData[currentUser][currentDay].exercises.push({ name, sets, reps, weight, notes });
+            await saveWorkout();
+            loadWorkout();
+            document.getElementById('exerciseForm').reset();
+        }
+        
+        document.getElementById('exerciseForm').addEventListener('submit', addExerciseUI);
         
         // Initialize the app
         loadWorkoutData();
