@@ -13,28 +13,36 @@
           "sets": 4,
           "reps": 6,
           "weight": 25,
-          "notes": "Focus on controlled movement"
+          "notes": "Focus on controlled movement",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Tricep Cable Extensions",
           "sets": 3,
           "reps": 12,
           "weight": 15,
-          "notes": "Keep elbows stationary"
+          "notes": "Keep elbows stationary",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Lateral Raises",
           "sets": 3,
           "reps": 8,
           "weight": 2,
-          "notes": "Control the eccentric"
+          "notes": "Control the eccentric",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Incline Run",
           "Time": 10,
           "Speed": 3,
           "Incline": 6,
-          "notes": ""
+          "notes": "",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         }
       ]
     },
@@ -50,42 +58,54 @@
           "sets": 4,
           "reps": 8,
           "weight": 15,
-          "notes": "Full range of motion"
+          "notes": "Full range of motion",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Incline Dumbbell Curl",
           "sets": 4,
           "reps": 8,
           "weight": 6,
-          "notes": "Keep shoulders back"
+          "notes": "Keep shoulders back",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Cable Rows",
           "sets": 4,
           "reps": 10,
           "weight": 40,
-          "notes": "Squeeze shoulder blades"
+          "notes": "Squeeze shoulder blades",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Lat Pulldown",
           "sets": 4,
           "reps": 10,
           "weight": 45,
-          "notes": "Pull to upper chest"
+          "notes": "Pull to upper chest",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "D Row Handle",
           "sets": 2,
           "reps": 6,
           "weights": 34,
-          "notes": ""
+          "notes": "",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Incline Run",
           "Time": 10,
           "Speed": 3,
           "Incline": 6,
-          "notes": ""
+          "notes": "",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         }
       ]
     },
@@ -103,28 +123,36 @@
           "sets": 4,
           "reps": 12,
           "weight": 12,
-          "notes": "Alternate legs or do single leg sets"
+          "notes": "Alternate legs or do single leg sets",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Hamstring Curl",
           "sets": 3,
           "reps": 12,
           "weight": 25,
-          "notes": "Control the negative"
+          "notes": "Control the negative",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Seated Calf Raises",
           "sets": 3,
           "reps": 20,
           "weight": 15,
-          "notes": "Full stretch at bottom"
+          "notes": "Full stretch at bottom",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Incline Run",
           "Time": 10,
           "Speed": 3,
           "Incline": 6,
-          "notes": ""
+          "notes": "",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         }
       ]
     },
@@ -142,35 +170,45 @@
           "sets": 4,
           "reps": 8,
           "weight": 30,
-          "notes": "45-degree incline"
+          "notes": "45-degree incline",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Shoulder Press",
           "sets": 4,
           "reps": 10,
           "weight": 15,
-          "notes": "Keep core tight"
+          "notes": "Keep core tight",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Face Pull",
           "sets": 3,
           "reps": 15,
           "weight": 12,
-          "notes": "Focus on rear delt squeeze"
+          "notes": "Focus on rear delt squeeze",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Cable Crossover",
           "sets": 3,
           "reps": 12,
           "weight": 10,
-          "notes": "Squeeze at the center"
+          "notes": "Squeeze at the center",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Incline Run",
           "Time": 10,
           "Speed": 3,
           "Incline": 6,
-          "notes": ""
+          "notes": "",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         }
       ]
     }
@@ -189,28 +227,36 @@
           "sets": 4,
           "reps": 8,
           "weight": 60,
-          "notes": "Focus on controlled movement"
+          "notes": "Focus on controlled movement",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Tricep Cable Extensions",
           "sets": 3,
           "reps": 12,
           "weight": 25,
-          "notes": "Keep elbows stationary"
+          "notes": "Keep elbows stationary",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Lateral Raises",
           "sets": 3,
           "reps": 15,
           "weight": 12,
-          "notes": "Control the eccentric"
+          "notes": "Control the eccentric",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Incline Run",
           "Time": 10,
           "Speed": 3,
           "Incline": 6,
-          "notes": ""
+          "notes": "",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         }
       ]
     },
@@ -226,42 +272,54 @@
           "sets": 3,
           "reps": 10,
           "weight": 35,
-          "notes": "Full range of motion"
+          "notes": "Full range of motion",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Incline Dumbbell Curl",
           "sets": 3,
           "reps": 12,
           "weight": 18,
-          "notes": "Keep shoulders back"
+          "notes": "Keep shoulders back",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Cable Rows",
           "sets": 4,
           "reps": 10,
           "weight": 70,
-          "notes": "Squeeze shoulder blades"
+          "notes": "Squeeze shoulder blades",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Lat Pulldown",
           "sets": 4,
           "reps": 10,
           "weight": 80,
-          "notes": "Pull to upper chest"
+          "notes": "Pull to upper chest",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "D Row Handle",
           "sets": 2,
           "reps": 6,
           "weights": 42,
-          "notes": ""
+          "notes": "",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Incline Run",
           "Time": 10,
           "Speed": 3,
           "Incline": 6,
-          "notes": ""
+          "notes": "",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         }
       ]
     },
@@ -279,28 +337,36 @@
           "sets": 4,
           "reps": 12,
           "weight": 20,
-          "notes": "Alternate legs or do single leg sets"
+          "notes": "Alternate legs or do single leg sets",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Hamstring Curl",
           "sets": 3,
           "reps": 12,
           "weight": 45,
-          "notes": "Control the negative"
+          "notes": "Control the negative",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Seated Calf Raises",
           "sets": 3,
           "reps": 20,
           "weight": 30,
-          "notes": "Full stretch at bottom"
+          "notes": "Full stretch at bottom",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Incline Run",
           "Time": 10,
           "Speed": 3,
           "Incline": 6,
-          "notes": ""
+          "notes": "",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         }
       ]
     },
@@ -318,35 +384,45 @@
           "sets": 4,
           "reps": 8,
           "weight": 55,
-          "notes": "45-degree incline"
+          "notes": "45-degree incline",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Shoulder Press",
           "sets": 4,
           "reps": 10,
           "weight": 25,
-          "notes": "Keep core tight"
+          "notes": "Keep core tight",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Face Pull",
           "sets": 3,
           "reps": 15,
           "weight": 18,
-          "notes": "Focus on rear delt squeeze"
+          "notes": "Focus on rear delt squeeze",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Cable Crossover",
           "sets": 3,
           "reps": 12,
           "weight": 15,
-          "notes": "Squeeze at the center"
+          "notes": "Squeeze at the center",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         },
         {
           "name": "Incline Run",
           "Time": 10,
           "Speed": 3,
           "Incline": 6,
-          "notes": ""
+          "notes": "",
+          "status": "green",
+          "lastUpdated": "2025-07-08T10:00:00.000Z"
         }
       ]
     }

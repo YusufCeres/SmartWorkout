@@ -95,8 +95,101 @@
             workout.exercises.forEach((exercise, index) => {
                 const card = document.createElement('div');
                 card.className = 'exercise-card';
+                
+                // Status circle and last updated
+                const status = exercise.status || 'green';
+                const lastUpdated = exercise.lastUpdated ? new Date(exercise.lastUpdated) : null;
+                const statusColors = { green: '#2ecc40', orange: '#ff9800', red: '#e53935' };
+                
+                // Create status header div
+                const statusHeader = document.createElement('div');
+                statusHeader.style.display = 'flex';
+                statusHeader.style.alignItems = 'center';
+                statusHeader.style.marginBottom = '10px';
+                
+                const statusCircle = document.createElement('span');
+                statusCircle.className = 'status-circle';
+                statusCircle.style.background = statusColors[status] || '#2ecc40';
+                statusCircle.title = 'Tap to change status';
+                statusCircle.style.display = 'inline-block';
+                statusCircle.style.width = '18px';
+                statusCircle.style.height = '18px';
+                statusCircle.style.borderRadius = '50%';
+                statusCircle.style.marginRight = '10px';
+                statusCircle.style.verticalAlign = 'middle';
+                statusCircle.style.cursor = 'pointer';
+                
+                // Status color picker popup
+                statusCircle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    // Remove any existing picker
+                    document.querySelectorAll('.status-picker').forEach(p => p.remove());
+                    // Create picker
+                    const picker = document.createElement('div');
+                    picker.className = 'status-picker';
+                    picker.style.position = 'absolute';
+                    picker.style.display = 'flex';
+                    picker.style.gap = '8px';
+                    picker.style.background = '#232323';
+                    picker.style.padding = '8px 12px';
+                    picker.style.borderRadius = '8px';
+                    picker.style.boxShadow = '0 2px 8px rgba(0,0,0,0.3)';
+                    picker.style.zIndex = 1000;
+                    // Position picker
+                    const rect = statusCircle.getBoundingClientRect();
+                    picker.style.left = `${rect.left + window.scrollX + 24}px`;
+                    picker.style.top = `${rect.top + window.scrollY - 8}px`;
+                    // Add color options
+                    ['green', 'orange', 'red'].forEach(color => {
+                        const opt = document.createElement('span');
+                        opt.style.background = statusColors[color];
+                        opt.style.width = '22px';
+                        opt.style.height = '22px';
+                        opt.style.borderRadius = '50%';
+                        opt.style.display = 'inline-block';
+                        opt.style.cursor = 'pointer';
+                        opt.style.border = color === status ? '2px solid #fff' : '2px solid transparent';
+                        opt.title = color.charAt(0).toUpperCase() + color.slice(1);
+                        opt.addEventListener('click', async (ev) => {
+                            ev.stopPropagation();
+                            exercise.status = color;
+                            exercise.lastUpdated = new Date().toISOString();
+                            await saveWorkout();
+                            loadWorkout();
+                            picker.remove();
+                        });
+                        picker.appendChild(opt);
+                    });
+                    // Remove picker on outside click
+                    setTimeout(() => {
+                        document.addEventListener('click', function removePicker() {
+                            picker.remove();
+                            document.removeEventListener('click', removePicker);
+                        });
+                    }, 10);
+                    document.body.appendChild(picker);
+                });
+                
+                // Last updated display
+                const lastUpdatedSpan = document.createElement('span');
+                lastUpdatedSpan.className = 'last-updated';
+                lastUpdatedSpan.style.fontSize = '0.85em';
+                lastUpdatedSpan.style.color = '#b0b0b0';
+                lastUpdatedSpan.style.marginLeft = '4px';
+                lastUpdatedSpan.textContent = lastUpdated ? `Last updated: ${lastUpdated.toLocaleString()}` : '';
+                
+                // Add elements to status header
+                statusHeader.appendChild(statusCircle);
+                statusHeader.appendChild(lastUpdatedSpan);
+                
+                // Add status header to card
+                card.appendChild(statusHeader);
+                
+                // Create exercise content
+                const exerciseContent = document.createElement('div');
+                
                 if (exercise.name === 'Incline Run') {
-                    card.innerHTML = `
+                    exerciseContent.innerHTML = `
                         <div class="exercise-name">${exercise.name}</div>
                         <div class="exercise-stats">
                             <div class="stat-group">
@@ -115,7 +208,7 @@
                         <div class="exercise-notes">${exercise.notes}</div>
                     `;
                 } else {
-                    card.innerHTML = `
+                    exerciseContent.innerHTML = `
                         <div class="exercise-name">${exercise.name}</div>
                         <div class="exercise-stats">
                             <div class="stat-group">
@@ -134,6 +227,10 @@
                         <div class="exercise-notes">${exercise.notes}</div>
                     `;
                 }
+                
+                // Add exercise content to card
+                card.appendChild(exerciseContent);
+                
                 exercisesList.appendChild(card);
             });
         }
