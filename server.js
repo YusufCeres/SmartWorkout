@@ -1,10 +1,12 @@
 const express = require('express');
 const { doc, getDoc, setDoc } = require('firebase/firestore');
 const { db } = require('./firebase');
+const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Middleware
 app.use(express.static('.'));
 app.use(express.json());
 
@@ -49,6 +51,12 @@ app.put('/workout-data', async (req, res) => {
   }
 });
 
+// Serve the main HTML file for the root route
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// Start server
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
